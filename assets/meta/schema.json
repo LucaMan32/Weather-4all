@@ -1,0 +1,24 @@
+{
+    "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Weather4all",
+        "description": "Il tuo servizio metereologico online semplice e per tutti",
+        "about": "Meteo mondiale",
+        "inLanguage" : "English",
+        "url" : "weather4all.herokuapp.com",
+        "author": {
+          "@type" : "Person",
+          "name" : "Luca Manfrin"
+        },
+        "publisher": {
+          "@type" : "CollegeOrUniversity",
+          "name" : "unimi"
+        },
+        "creator": {
+          "@type" : "Person",
+          "name" : "Luca Manfrin"
+        },
+        "copyrightYear" : "2022",
+        "dateModified" : "1 December 2022"
+    }
+    
