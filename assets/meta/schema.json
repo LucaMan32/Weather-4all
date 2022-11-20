@@ -1,11 +1,11 @@
 {
     "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Weather4all",
+        "name": "Weather-4all",
         "description": "Il tuo servizio metereologico online semplice e per tutti",
         "about": "Meteo mondiale",
         "inLanguage" : "English",
-        "url" : "weather4all.herokuapp.com",
+        "url" : "weather-4all.herokuapp.com",
         "author": {
           "@type" : "Person",
           "name" : "Luca Manfrin"
