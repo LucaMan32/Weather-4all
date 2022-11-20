@@ -1,7 +1,7 @@
 
-Weather4all è una WebApp inerente al meteo, la quale consente la ricerca, tramite apposito form, di qualsiasi città nel mondo e di 
+Weather-4all è una WebApp inerente al meteo, la quale consente la ricerca, tramite apposito form, di qualsiasi città nel mondo e di 
 fornire informazioni inerenti al giorno corrente e fino ai sei giorni successivi, tra le varie informazioni possiamo trovare: 
-temperatura, umidità, velocità del vento, temperatura percepita, qualità dell'aria, orario dell'alba e del tramonto e infine di che 
+temperatura, umidità, velocità del vento, qualità dell'aria, orario dell'alba e del tramonto e infine di che 
 giornata si tratta, ad esempio: nuvolosa, serena o molto altro.
 Nel momento in cui si approda nel sito sarà possibile visualizzare una pagina di presentazione con eventuale bottone per andare a 
 ricercar il paese desiderato e altre informazioni relative al sito e i collegamenti ad alcuni dei miei profili, quali: Linkedin in caso 
