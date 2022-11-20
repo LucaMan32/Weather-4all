@@ -12,7 +12,7 @@ async function getImage (city,key) {
       .then(data => backgroundLink = data.results[random].urls.regular)
   } catch (err) {
     console.log("Errore con il caricamento dello sfondo")
-    backgroundLink = "/img/landscape.webp"
+    backgroundLink = "/img/weather_bg.webp"
   }
   return backgroundLink
 }
@@ -121,7 +121,7 @@ router.get('/meteo', async (req,res) => {
               imgdayafter: null,
               mindayafter: null,
               maxdayafter: null,
-              unsplash: "/img/landscape.webp",
+              unsplash: "/img/weather_bg.webp",
               day1: null,
               day2: null,
               day3: null,
@@ -213,7 +213,7 @@ router.get('/meteo', async (req,res) => {
         imgdayafter: null,
         mindayafter: null,
         maxdayafter: null,
-        unsplash: "/img/landscape.webp",
+        unsplash: "/img/weather_bg.webp",
         day1: null,
         day2: null,
         day3: null,
@@ -269,7 +269,7 @@ router.post('/meteo', async (req,res) => {
         imgdayafter: null,
         mindayafter: null,
         maxdayafter: null,
-        unsplash: "/img/landscape.webp",
+        unsplash: "/img/weather_bg.webp",
         day1: null,
         day2: null,
         day3: null,
@@ -315,7 +315,7 @@ router.post('/meteo', async (req,res) => {
                 imgdayafter: null,
                 mindayafter: null,
                 maxdayafter: null,
-                unsplash: "/img/landscape.webp",
+                unsplash: "/img/weather_bg.webp",
                 day1: null,
                 day2: null,
                 day3: null,
