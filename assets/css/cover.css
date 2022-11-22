@@ -1,7 +1,4 @@
-/*
- * Globals
- */
-
+/* Globals */
 
 /* Custom default button */
 .btn-secondary,
@@ -11,10 +8,7 @@
   text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-
-/*
- * Base structure
- */
+/* Base structure */
 
 body {  /* parte relativa al body: sfondo, dimensione ecc */
   background-image: url("../img/index_bg.webp");
@@ -73,7 +67,7 @@ body {  /* parte relativa al body: sfondo, dimensione ecc */
 
 .b-example-vr {
   flex-shrink: 0;
-  width: 1.5rem;
+  width: 1.5rem;   
   height: 100vh;
 }
 
