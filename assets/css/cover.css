@@ -16,7 +16,7 @@
  * Base structure
  */
 
-body {
+body {  /* parte relativa al body: sfondo, dimensione ecc */
   background-image: url("../img/index_bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
@@ -28,12 +28,9 @@ body {
   max-width: 42em;
 }
 
+/* Header */
 
-/*
- * Header
- */
-
-.nav-masthead .nav-link {
+.nav-masthead .nav-link {  /* parte relativa ad home e weather*/
   color: rgba(255, 255, 255, .5); 
   border-bottom: .25rem solid transparent;
 }
@@ -47,7 +44,7 @@ body {
   margin-left: 1rem;
 }
 
-.nav-masthead .active {
+.nav-masthead .active {  /* colora di bianco la pagina selezionata */
   color: #fff;
   border-bottom-color: #fff;
 }
