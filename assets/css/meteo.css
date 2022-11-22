@@ -50,11 +50,12 @@ body {
   }
   h1.temp {
     margin: 0;
-    margin-bottom: 0.25em;
+    margin-bottom: 0.1em;
   }
   .flex {
     display: flex;
     align-items: center;
+    margin-top: 0.1em;
   }
   .description {
     text-transform: capitalize;
