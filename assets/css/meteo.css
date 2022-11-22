@@ -146,7 +146,7 @@ body {
   .switch-container {
     position: absolute;
     margin-left: 24.5%;
-    margin-top: 0%;
+    margin-top: 0.1em;
   }
   input:checked + label .fa-sun {
     transform: translateX(-43px) rotate(160deg);
