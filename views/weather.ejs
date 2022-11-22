@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Meteo della cità di <%= city %>, Weather of <%= city %>">
+    <meta name="description" content="Meteo della città di <%= city %>, Weather of <%= city %>">
     <meta name="author" content="Luca Manfrin, 02094A, Università degli Studi di Milano">
     <meta name="keywords" content="Meteo, Città, Previsioni, Clima, Tempo, Temperatura, Precipitazioni, <%= city %>, <%= description %>, Weather, City, Rainfall, Temperature, Forecast">
     <link href="/meta/schema.json" type="application/ld+json" rel="alternate">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <title>Weather4all: <%= city %></title>
-    <link rel="stylesheet" href="/css/meteo.css">
+    <link rel="stylesheet" href="/assets/css/meteo.css">
     <link rel="icon" type="image/x-icon" href="img/icon_w.png">
   </head>
   <body style="background: url('<%= unsplash %>');background-repeat: no-repeat;background-size: cover;">
     <div class="card" id="card">
       <div class="search">
-        <form action="/meteo" method="POST" id="req1">
+        <form action="/weather" method="POST" id="req1">
           <input type="text" class="search-bar" id="search-bar" name="city" placeholder="Search" required>
           <button type="submit" id="search" name="search" form="req1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
             width="1.5em" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +102,7 @@
       <% } %>
       <p id="footer">Luca Manfrin, 02094A, Università degli Studi di Milano, 2022 &copy;</p>
     </div>
-    <script src="/js/darkMode.js"></script>
-    <script src="/js/saveChoice.js"></script>
+    <script src="/assets/js/darkMode.js"></script>
+    <script src="/assets/js/saveChoice.js"></script>
   </body>
 </html>
