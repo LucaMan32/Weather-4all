@@ -57,7 +57,7 @@ router.get('/weather', async (req,res) => {
       })
   } catch (err) {
     console.log("Errore chiamata GET e recupero location tramite IP")
-    res.render("meteo", {
+    res.render("weather", {
       city: null,
       temp: null,
       description: null,
@@ -104,7 +104,7 @@ router.get('/weather', async (req,res) => {
         .then(res => res.json())
         .then(data => {
           if(data.message === 'city not found' || data.message === 'wrong latitude' || data.message === 'wrong longitude'){
-            res.render('meteo', {
+            res.render('weather', {
               city: data.message,
               temp: null,
               description: null,
@@ -156,7 +156,7 @@ router.get('/weather', async (req,res) => {
             } else {
               var sunsmin = sunset.getMinutes()
             }
-            res.render('meteo', {
+            res.render('weather', {
               city: city,
               temp: data.current.temp,
               description: data.current.weather[0].description,
@@ -196,7 +196,7 @@ router.get('/weather', async (req,res) => {
         })
     } catch (err) {
       console.log("Errore nel Weather API Call")
-      res.render('meteo', {
+      res.render('weather', {
         city: "Something went wrong with weather!",
         temp: null,
         description: null,
@@ -252,7 +252,7 @@ router.post('/weather', async (req,res) => {
       })
     } catch (err) {
       console.log("Errore nel Geocoding API Call")
-      res.render('meteo', {
+      res.render('weather', {
         city: "Something went wrong with coordinates!",
         temp: null,
         description: null,
@@ -298,7 +298,7 @@ router.post('/weather', async (req,res) => {
           .then(res => res.json())
           .then(data => {
             if(data.message === 'city not found' || data.message === 'wrong latitude' || data.message === 'wrong longitude'){
-              res.render('meteo', {
+              res.render('weather', {
                 city: data.message,
                 temp: null,
                 description: null,
@@ -350,7 +350,7 @@ router.post('/weather', async (req,res) => {
               } else {
                 var sunsmin = sunset.getMinutes()
               }
-              res.render('meteo', {
+              res.render('weather', {
                 city: city,
                 temp: data.current.temp,
                 description: data.current.weather[0].description,
@@ -390,7 +390,7 @@ router.post('/weather', async (req,res) => {
           })
       } catch (err) {
         console.log("Errore nel Weather API Call")
-        res.render('meteo', {
+        res.render('weather', {
           city: "Something went wrong with weather!",
           temp: null,
           description: null,
