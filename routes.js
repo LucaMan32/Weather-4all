@@ -36,7 +36,7 @@ router.get('/', (req,res) => {
   res.render("index")
 })
 
-router.get('/meteo', async (req,res) => {
+router.get('/weather', async (req,res) => {
   //passaggio per prendere reale indirizzo IP client e non del server che effettua la richiesta
   var ipAddr = req.headers["x-forwarded-for"];
   if (ipAddr){
@@ -74,7 +74,7 @@ router.get('/meteo', async (req,res) => {
       imgdayafter: null,
       mindayafter: null,
       maxdayafter: null,
-      unsplash: "/img/landscape.webp",
+      unsplash: "/img/weather_bg.webp",
       day1: null,
       day2: null,
       day3: null,
@@ -238,7 +238,7 @@ router.get('/meteo', async (req,res) => {
   }
 })
 
-router.post('/meteo', async (req,res) => {
+router.post('/weather', async (req,res) => {
   const city = req.body.city
   var backgroundLink = await getImage(city,process.env.UNSPLASH_KEY)
   var lat,lon
@@ -407,7 +407,7 @@ router.post('/meteo', async (req,res) => {
           imgdayafter: null,
           mindayafter: null,
           maxdayafter: null,
-          unsplash: "/img/landscape.webp",
+          unsplash: "/img/weather_bg.webp",
           day1: null,
           day2: null,
           day3: null,
