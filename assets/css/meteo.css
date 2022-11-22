@@ -50,7 +50,7 @@ body {
   }
   h1.temp {
     margin: 0;
-    margin-bottom: 0.8em;
+    margin-bottom: 2%;
   }
   .flex {
     display: flex;
@@ -146,6 +146,7 @@ body {
   .switch-container {
     position: absolute;
     margin-left: 24.5%;
+    margin-top: 0%;
   }
   input:checked + label .fa-sun {
     transform: translateX(-43px) rotate(160deg);
