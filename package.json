@@ -1,7 +1,7 @@
 {
     "name": "Weather-4all",
     "version": "1.0.0",
-    "description": "Weather-4all, il meteo semplice e per tutti",
+    "description": "Weather-4all, simple weather for everyone",
     "author": "Luca Manfrin",
     "scripts": {
       "start": "node app",

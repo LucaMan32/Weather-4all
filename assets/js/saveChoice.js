@@ -14,8 +14,7 @@ function setDark () {
   document.getElementById('search').style.backgroundColor = "#7c7c7c2b"
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  //funzione per leggere il json e impostare switch dark mode
+document.addEventListener('DOMContentLoaded', function () {   // funzione per leggere il json e impostare lo switch in dark mode
   const choice = JSON.parse(localStorage.getItem('mode'))
   if(choice.lightMode){
     scelta.checked=true

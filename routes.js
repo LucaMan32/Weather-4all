@@ -2,7 +2,7 @@ const router = require('express').Router()
 require('dotenv').config()
 const fetch = require('node-fetch')
 
-async function getImage (city,key) {
+async function getImage (city,key) { // funzione per l'acquisizione dello sfondo
   var random = Math.floor(Math.random()*10)
   const unsplashUrl = `http://api.unsplash.com/search/photos?query=${city}&client_id=${key}`
   var backgroundLink
@@ -11,13 +11,13 @@ async function getImage (city,key) {
       .then(res => res.json())
       .then(data => backgroundLink = data.results[random].urls.regular)
   } catch (err) {
-    console.log("Errore con il caricamento dello sfondo")
-    backgroundLink = "/img/weather_bg.webp"
+    console.log("Error with the loading of the background...")
+    backgroundLink = "/img/weather_bg.webp"  // in caso di errore viene caricato uno sfondo predefinito
   }
   return backgroundLink
 }
 
-async function getAQ (lat,lon,key) {
+async function getAQ (lat,lon,key) {  // funzione per l'acquisizione della qualità dell'aria
   const aqiUrl = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${process.env.API_KEY}`
   var aq
   try{
@@ -25,10 +25,10 @@ async function getAQ (lat,lon,key) {
       .then(res => res.json())
       .then(data => aq = data.list[0].main.aqi)
   } catch (err) {
-    console.log("Errore nella chiamata fetch API per AIR QUALITY INDEX!")
+    console.log("Error in the fetch API call for the Air Quality Index.")  // messaggio in caso di errore
   }
   if(isNaN(aq))
-    aq = "Errore!"
+    aq = "Error!"
   return aq
 }
 
@@ -36,8 +36,7 @@ router.get('/', (req,res) => {
   res.render("index")
 })
 
-router.get('/weather', async (req,res) => {
-  //passaggio per prendere reale indirizzo IP client e non del server che effettua la richiesta
+router.get('/weather', async (req,res) => {  // acquisizione dell'indirizzo IP reale del client e non del server che effettua la richiesta
   var ipAddr = req.headers["x-forwarded-for"];
   if (ipAddr){
     var list = ipAddr.split(",");
@@ -56,7 +55,7 @@ router.get('/weather', async (req,res) => {
         lon = data.lon
       })
   } catch (err) {
-    console.log("Errore chiamata GET e recupero location tramite IP")
+    console.log("Error in the GET call and the recovery of the location by IP address.")
     res.render("weather", {
       city: null,
       temp: null,
@@ -195,7 +194,7 @@ router.get('/weather', async (req,res) => {
           }
         })
     } catch (err) {
-      console.log("Errore nel Weather API Call")
+      console.log("Error in the Weather API Call")
       res.render('weather', {
         city: "Something went wrong with weather!",
         temp: null,
@@ -234,7 +233,7 @@ router.get('/weather', async (req,res) => {
       })
     }
   } else {
-    console.log("Errore nelle coordinate o nell'air quality index. CONTROLLARE API")
+    console.log("Error in the coordinate or in the Air Quality Index. Look at the API")
   }
 })
 
@@ -251,7 +250,7 @@ router.post('/weather', async (req,res) => {
         lon = data[0].lon;
       })
     } catch (err) {
-      console.log("Errore nel Geocoding API Call")
+      console.log("Error in the Geocoding API Call")
       res.render('weather', {
         city: "Something went wrong with coordinates!",
         temp: null,
@@ -389,7 +388,7 @@ router.post('/weather', async (req,res) => {
             }
           })
       } catch (err) {
-        console.log("Errore nel Weather API Call")
+        console.log("Error in the Weather API Call")
         res.render('weather', {
           city: "Something went wrong with weather!",
           temp: null,
@@ -428,7 +427,7 @@ router.post('/weather', async (req,res) => {
         })
       }
     } else {
-      console.log("Errore nelle coordinate o nell'air quality index. CONTROLLARE API")
+      console.log("Error in the coordinate or in the Air Quality Index. Look at the API")
     }
 })
 
