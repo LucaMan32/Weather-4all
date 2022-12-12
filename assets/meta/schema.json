@@ -5,7 +5,7 @@
         "description": "Your online weather simple and for everyone",
         "about": "Global weather",
         "inLanguage" : "English",
-        "url" : "weather-4all.herokuapp.com",
+        "url" : "https://LucaMan32.github.io/Weather-4all",
         "author": {
           "@type" : "Person",
           "name" : "Luca Manfrin"

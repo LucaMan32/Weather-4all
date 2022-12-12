@@ -1,12 +1,12 @@
 {
-    "homepage": "https://LucaMan32.github.io/Weather-4all" 
+    "homepage": "https://LucaMan32.github.io/Weather-4all",
     "name": "Weather-4all",
     "version": "1.0.0",
     "description": "Weather-4all, simple weather for everyone",
     "author": "Luca Manfrin",
     "scripts": {
       "start": "node app",
-      "dev": "nodemon app"
+      "dev": "nodemon app",
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build"
     },
