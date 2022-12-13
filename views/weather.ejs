@@ -34,19 +34,19 @@
          <span class="ball"></span> 
        </label>
       </div>
-      <div class="weather" text-align="center">  <!-- creazione div relativo al meteo con div per ogni campo -->
+      <div class="weather">  <!-- creazione div relativo al meteo con div per ogni campo -->
         <% if(city !== null) { %>
           <h2 class="city">Weather in <%= city %></h2>
         <% } %>
         <% if(temp !== null) { %>
           <h1 class="temp"><%= temp %> °</h1>
         <% } %>
-        <div class="flex" text-align="center">
+        <div class="flex">
           <% if(imgsrc !== null) { %>
             <img src="<%= imgsrc %>" alt="icona meteo" class="icon" loadin="lazy">
           <% } %>
           <% if(description !== null) { %>
-            <div class="description" text-align="center"><%= description %></div>
+            <div class="description"><%= description %></div>
           <% } %>
         </div>
         <% if(humidity !== null) { %>
@@ -67,9 +67,9 @@
       </div>
       <hr/>  <!-- linea orizzontale per dividere -->
       <% if (min !== null && max !== null && imgtoday !== null) { %>
-        <div class="days" text-align="center">
+        <div class="days">
           <div class="flex">
-            <div text-align="center">Today:&nbsp;</div>
+            <div>Today:&nbsp;</div>
             <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= min %>° / <%= max %>°</div>
           </div>
