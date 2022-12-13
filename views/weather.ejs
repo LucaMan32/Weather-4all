@@ -41,12 +41,12 @@
         <% if(temp !== null) { %>
           <h1 class="temp"><%= temp %> °</h1>
         <% } %>
-        <div class="flex">
+        <div class="flex" text-align="center">
           <% if(imgsrc !== null) { %>
             <img src="<%= imgsrc %>" alt="icona meteo" class="icon" loadin="lazy">
           <% } %>
           <% if(description !== null) { %>
-            <div class="description"><%= description %></div>
+            <div class="description" text-align="center"><%= description %></div>
           <% } %>
         </div>
         <% if(humidity !== null) { %>
@@ -69,7 +69,7 @@
       <% if (min !== null && max !== null && imgtoday !== null) { %>
         <div class="days" text-align="center">
           <div class="flex">
-            <div>Today:&nbsp;</div>
+            <div text-align="center">Today:&nbsp;</div>
             <img src="<%= imgtoday %>" class="icon" loading="lazy" alt="icona meteo">
             <div><%= min %>° / <%= max %>°</div>
           </div>
