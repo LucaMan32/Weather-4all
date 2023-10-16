@@ -1,3 +1,4 @@
+# weather-4all.cyclic.app
 
 Weather-4all è una WebApp inerente al meteo, la quale ,tramite apposito form, consente la ricerca di qualsiasi città nel mondo 
 fornendo le informazioni inerenti al meteo del giorno corrente e fino ai cinque giorni successive.
@@ -14,3 +15,5 @@ Moduli Node.JS utilizzati:
 - Ddos 
 
 Per visualizzare l'intero funzionamento del sito si troveranno maggiori dettagli all'interno della relazione: Luca_Manfrin_02049A.pdf
+
+Manfrin Luca.
